@@ -60,4 +60,9 @@ public class Employee {
     public void addSubordinate(Employee subordinate) {
         subordinates.add(subordinate);
     }
+    @Override
+    public String toString() {
+        return String.format("Employee{id=%d, name='%s %s', salary=%.2f, managerId=%s, subordinates=%d}",
+                id, firstName, lastName, salary, (managerId == null ? "None" : managerId), subordinates.size());
+    }
 }

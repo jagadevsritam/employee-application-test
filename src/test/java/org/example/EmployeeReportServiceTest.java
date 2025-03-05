@@ -24,7 +24,8 @@ public class EmployeeReportServiceTest {
         if (resourceUrl != null) {
             String filePath = Paths.get(resourceUrl.getPath()).toString();
             employeeMap = employeeRepo.readEmployees(filePath);
-            assertNotNull(employeeReportService);
+            assertNotNull(employeeMap);
+            employeeMap.entrySet().forEach(e -> System.out.println(e.getKey() + " " + e.getValue()));
         } else {
             System.out.println("File not found!");
         }

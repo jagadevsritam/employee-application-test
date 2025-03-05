@@ -6,11 +6,12 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class EmployeeRepo {
     public Map<Integer, Employee> readEmployees(String filePath) throws IOException {
-        Map<Integer, Employee> employeeMap = new HashMap<>();
+        Map<Integer, Employee> employeeMap = new LinkedHashMap<>();
         BufferedReader reader = new BufferedReader(new FileReader(filePath));
         String line;
 
